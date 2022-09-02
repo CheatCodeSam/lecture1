@@ -8,8 +8,8 @@ function invertimage(filename) {
     console.log("File format not supported");
     return 1;
   }
-  var width = data.readUint32LE(18);
-  var height = data.readUint32LE(22);
+  var width = data.readUint16LE(18);
+  var height = data.readUint16LE(22);
   var imageData = data.slice(52, data.length);
   console.log("Width is " + width);
   console.log("Height is " + height);
